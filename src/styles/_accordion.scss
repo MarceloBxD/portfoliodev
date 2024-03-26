@@ -1,0 +1,45 @@
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(12px, 2vh, 35px) 0 clamp(12px, 2vh, 35px) 20px;
+  width: 100%;
+  border-top: 1px solid black;
+  //transition: all $transition-time linear;
+  &:nth-child(1) {
+    border-top: unset;
+  }
+  p {
+    font-size: 0.9rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+}
+
+.accordion.active + .panel {
+  padding-bottom: clamp(12px, 2vh, 35px);
+  max-height: 40000px;
+}
+
+.accordion > .chevron {
+  transition: all $transition-time-quick $transition-easing;
+  transform: rotate(0);
+  margin-left: -10px;
+  margin-right: toRem(20);
+  path {
+    stroke: $primary;
+  }
+}
+
+.accordion.active > .chevron {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding-bottom: 0;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: all $transition-time linear;
+  position: relative;
+}

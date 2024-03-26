@@ -1,0 +1,66 @@
+@import "../../styles/theme", "../../styles/animations";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  counter-reset: index;
+  animation: fadeIn $transition-time $transition-easing;
+
+  .img {
+  }
+
+  .nav {
+    h1 {
+    }
+
+    .list {
+      li {
+        list-style: none;
+        position: relative;
+        margin: $gap;
+
+        a {
+          text-decoration: none;
+          color: $text-primary;
+          font-weight: $font-weight-semibold;
+          font-family: $fontawesome-brands;
+          font-size: $font-size-xxl;
+
+          &:hover {
+            color: $primary;
+
+            &::before {
+              color: $primary;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            content: counter(index);
+            counter-increment: index;
+            text-decoration: underline;
+            font-size: $font-size-m;
+            color: $bullet-color;
+            left: -30px;
+            top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: $font-size-xxl;
+    color: $text-primary;
+    cursor: pointer;
+  }
+}

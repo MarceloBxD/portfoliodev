@@ -1,0 +1,30 @@
+@import "../../styles/_theme.scss";
+
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: $primary;
+  position: fixed;
+  top: 0;
+
+  .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $primary; // Cor da barra de progresso
+    transition: width 0.3s ease; // Adiciona transição suave para a largura
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 8px; // Largura do marcador de progresso
+      height: 8px;
+      background-color: $secondary; // Cor do marcador de progresso
+      border-radius: 50%;
+    }
+  }
+}
