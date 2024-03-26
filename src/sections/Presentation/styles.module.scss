@@ -1,0 +1,24 @@
+@import "../../styles/theme";
+
+.presentation {
+  margin-top: 150px;
+
+  .slideTexts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semibold;
+    }
+
+    h1 {
+      font-size: $font-size-xxl;
+      font-weight: $font-weight-bold;
+      color: $primary;
+      margin: 0;
+    }
+  }
+}

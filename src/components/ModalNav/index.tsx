@@ -1,6 +1,7 @@
 import React from "react";
 import { X } from "lucide-react";
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 import { PORTFOLIO_OWNER } from "@/constants";
 
@@ -38,7 +39,14 @@ interface ModalNavProps {
 export const ModalNav: React.FC<ModalNavProps> = ({ setOpenModalNav }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.img}>{/* Imagem */}</div>
+      <div className={styles.img}>
+        <Image
+          layout="fill"
+          loading="lazy"
+          alt={"Programador em frente a um computador com código na tela"}
+          src={"/images/gallery/navimage.jpg"}
+        />
+      </div>
       <div className={styles.nav}>
         <h1>{PORTFOLIO_OWNER}</h1>
         <ul className={styles.list}>

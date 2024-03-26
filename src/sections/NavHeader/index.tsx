@@ -6,12 +6,11 @@ import { Menu } from "lucide-react";
 import { ModalNav } from "@/components/ModalNav";
 
 export const NavHeader = () => {
-  const [openModalNav, setOpenModalNav] = useState<boolean>(true);
+  const [openModalNav, setOpenModalNav] = useState<boolean>(false);
 
   return (
     <section className={styles.container}>
       <div>
-        {/* Imagem */}
         <h1>Marcelo Bracet</h1>
       </div>
       <div>

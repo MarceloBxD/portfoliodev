@@ -7,60 +7,75 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
+  justify-content: center;
+  align-items: center;
   counter-reset: index;
   animation: fadeIn $transition-time $transition-easing;
 
   .img {
+    flex: 1;
+    margin-right: 120px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.nav {
+  flex: 2;
+  h1 {
   }
 
-  .nav {
-    h1 {
-    }
+  .list {
+    li {
+      list-style: none;
+      position: relative;
+      margin: $gap;
 
-    .list {
-      li {
-        list-style: none;
-        position: relative;
-        margin: $gap;
+      a {
+        text-decoration: none;
+        color: $text-primary;
+        font-weight: $font-weight-semibold;
+        font-family: $fontawesome-brands;
+        font-size: $font-size-xxl;
 
-        a {
-          text-decoration: none;
-          color: $text-primary;
-          font-weight: $font-weight-semibold;
-          font-family: $fontawesome-brands;
-          font-size: $font-size-xxl;
-
-          &:hover {
-            color: $primary;
-
-            &::before {
-              color: $primary;
-            }
-          }
+        &:hover {
+          color: $primary;
 
           &::before {
-            position: absolute;
-            content: counter(index);
-            counter-increment: index;
-            text-decoration: underline;
-            font-size: $font-size-m;
-            color: $bullet-color;
-            left: -30px;
-            top: 10px;
+            color: $primary;
           }
+        }
+
+        &::before {
+          position: absolute;
+          content: counter(index);
+          counter-increment: index;
+          text-decoration: underline;
+          font-size: $font-size-m;
+          color: $bullet-color;
+          left: -30px;
+          top: 10px;
         }
       }
     }
   }
+}
 
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: $font-size-xxl;
-    color: $text-primary;
-    cursor: pointer;
-  }
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: $font-size-xxl;
+  color: $text-primary;
+  cursor: pointer;
 }
