@@ -1,0 +1,101 @@
+@import "../../styles/theme";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 100vh;
+  color: $primary;
+  font-family: "Futura", Roboto, Helvetica Neue, sans-serif;
+  text-align: center;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 2rem 0;
+  }
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 0;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      color: $primary;
+      width: 100%;
+      max-width: 300px;
+      background-color: #17131e;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #fff;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        li {
+          font-size: 16px;
+          font-weight: 400;
+          background-color: $primary;
+          color: #17131e;
+          list-style: none;
+          padding: 5px 10px;
+          border-radius: 8px;
+        }
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: 700;
+        color: $primary;
+        background-color: #17131e;
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: $primary;
+          color: #17131e;
+        }
+      }
+    }
+  }
+}

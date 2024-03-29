@@ -15,7 +15,8 @@ $bullet-color-active: $primary;
 $text-primary: #f8f3e1;
 $text-secondary: #393939;
 $text-dark: $background-primary;
-$text-light: #fff;
+$default-white: #fff;
+$default-black: #000;
 
 // FONT WEIGHT
 $font-weight-thin: 100;
@@ -58,7 +59,7 @@ $border-primary: $secondary;
 $border-size: clamp(8px, 2vh, 18px);
 
 $font-abarth: "FuturaSTD";
-$abarth-primary-bg: #fedb00;
+$abarth-primary-bg: $primary;
 $abarth-full-black: #000000;
 
 $section-horizontal-padding: clamp(40px, 4vw, 90px);
