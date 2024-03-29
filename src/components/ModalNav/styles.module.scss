@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,11 @@
         color: $text-primary;
         font-weight: $font-weight-semibold;
         font-family: $fontawesome-brands;
-        font-size: $font-size-xxl;
+        font-size: $font-size-2xl;
+
+        @media screen and (max-width: 768px) {
+          font-size: $font-size-xl;
+        }
 
         &:hover {
           color: $primary;
@@ -75,7 +79,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: $font-size-xxl;
+  font-size: $font-size-2xl;
   color: $text-primary;
   cursor: pointer;
 }

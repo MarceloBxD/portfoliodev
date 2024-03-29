@@ -8,14 +8,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 40px;
     h3 {
       font-size: $font-size-xl;
       font-weight: $font-weight-semibold;
     }
 
     h1 {
-      font-size: $font-size-xxl;
+      font-size: $font-size-2xl;
       font-weight: $font-weight-bold;
       color: $primary;
       margin: 0;
